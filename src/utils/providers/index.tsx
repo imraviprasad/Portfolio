@@ -1,8 +1,6 @@
-/** @format */
-
-import { ThemeProvider } from "@mui/material";
 import { FC } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
+import { ThemeProvider } from "@mui/material";
 import { lightTheme } from "../theme";
 
 type Props = {

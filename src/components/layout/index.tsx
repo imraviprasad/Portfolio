@@ -1,10 +1,11 @@
-import AboutMe from "../about-me";
+import S from "./layout.styled";
+import Header from "../header";
 
 const Layout = () => {
   return (
-    <div>
-      <AboutMe />
-    </div>
+    <S.LayoutContainer>
+      <Header />
+    </S.LayoutContainer>
   );
 };
 
