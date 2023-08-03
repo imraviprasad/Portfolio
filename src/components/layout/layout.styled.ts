@@ -6,8 +6,11 @@ namespace S {
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "flex-start",
-    width: "100vw",
+    backgroundColor: "#f9f9f9",
+    width: "100%",
     height: "fit-content",
+    overflow: "none",
+    paddingTop: "80px",
   }));
 }
 export default S;

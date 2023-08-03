@@ -1,25 +1,37 @@
-import { Box, styled } from "@mui/material";
+import { Box, Typography, styled } from "@mui/material";
 
 namespace S {
-  export const HeaderContainer = styled(Box)(({ theme }) => ({
+  export const HeaderContainer = styled("nav")(({ theme }) => ({
     display: "flex",
     alignItems: "center",
     justifyContent: "space-between",
     width: "100%",
-    height: "82px",
-    [theme.breakpoints.down("sm")]: {
-      height: "74px",
-    },
-    [theme.breakpoints.down("sm")]: {
-      height: "66px",
-    },
+    padding: "25px 40px 25px 50px",
+    backgroundColor: "#fff",
+    boxShadow: "0 0 10px rgba(0,0,0,0.09)",
+    height: "auto",
+    left: "0",
+    position: "fixed",
+    top: "0",
+    zIndex: "200",
   }));
 
-  export const LogoContainer = styled(Box)(({ theme }) => ({}));
+  export const LogoContainer = styled(Typography)(({ theme }) => ({
+    cursor: "pointer",
+    color: "#2d2e32",
+    fontSize: "20px",
+  }));
 
-  export const MenuContainer = styled(Box)(({ theme }) => ({
+  export const MenuContainer = styled("ul")(({ theme }) => ({
     display: "flex",
-    
+    gap: "2rem",
+    listStyle: "none",
+  }));
+
+  export const Menu = styled("li")(({ theme }) => ({
+    display: "flex",
+    cursor: "pointer",
+    fontSize: "17px",
   }));
 }
 export default S;
