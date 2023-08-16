@@ -45,7 +45,7 @@ namespace S {
     left: 0,
     width: "100%",
     height: "100%",
-    backgroundColor: "rgba(30, 54, 94, 0.8)",
+    // backgroundColor: "rgba(30, 54, 94, 0.8)",
     // backgroundColor: "rgba(76, 169, 181,0.8)",
     // background: "linear-gradient(175.31deg, #EEECFF 30.62%, #FDE7F1 99.66%)",
     borderRadius: "1rem",
@@ -66,6 +66,7 @@ namespace S {
     borderRadius: "1rem",
     transform: "rotateY(180deg)",
     backgroundColor: "#141C3A",
+    padding: "1rem",
   });
 
   export const LogoContainer = styled(Box)(({ theme }) => ({
@@ -100,8 +101,9 @@ namespace S {
   export const DescriptionText = styled(Typography)(({ theme }) => ({
     color: "white",
     zIndex: "0",
-    fontSize: "16px",
-    // fontWeight: "600",
+    fontSize: "12px",
+    fontWeight: "600",
+    // textAlign: "Center",
   }));
 }
 

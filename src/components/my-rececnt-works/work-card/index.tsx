@@ -13,11 +13,12 @@ type WorKCardProps = {
     description: string;
     websiteUrl?: string;
     background?: string;
+    overlayColor?: string;
   };
 };
 
 const WorkCard: FC<WorKCardProps> = ({ cardInfo }) => {
-  const { id, logo, projectName, subName, description, websiteUrl, background } = cardInfo;
+  const { id, logo, projectName, subName, description, websiteUrl, background, overlayColor } = cardInfo;
 
   const [isFlipped, setFlipped] = useState(false);
 
@@ -30,7 +31,11 @@ const WorkCard: FC<WorKCardProps> = ({ cardInfo }) => {
       <S.FlipCard isFlipped={isFlipped} onMouseEnter={handleFlip} onMouseLeave={handleFlip}>
         {/* <S.FlipCardFront sx={{ backgroundImage: `url(${YearntogetherDashboard})` }}> */}
         <S.FlipCardFront sx={{ backgroundImage: `url(${background})` }}>
-          <S.FlipCardFrontOverlay></S.FlipCardFrontOverlay>
+          <S.FlipCardFrontOverlay
+            sx={{
+              backgroundColor: overlayColor,
+            }}
+          />
           <S.LogoContainer>
             <S.Logo src={logo} alt="yearn-logo" />
             <S.Title>{projectName}</S.Title>

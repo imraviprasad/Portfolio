@@ -16,6 +16,7 @@ const workCard = [
     description: "The World's first-ever Gaming-Enabled IDO platform",
     websiteUrl: "https://app.yearntogether.com/",
     background: YearnDashboard,
+    overlayColor: "rgba(30, 54, 94, 0.75)",
   },
   {
     id: "2",
@@ -24,7 +25,8 @@ const workCard = [
     description:
       "CREATVERSE is the decentralized invite-only creators' professional network that unites top creators, carefully curated by mentors in the respective fields.",
     websiteUrl: "https://network.creatverse.com/",
-    // background: Creatverse,
+    background: Creatverse,
+    overlayColor: "rgba(199, 83, 68, 0.75)",
   },
   {
     id: "3",
@@ -34,6 +36,7 @@ const workCard = [
     description: "The World's first-ever Gaming-Enabled IDO platform",
     websiteUrl: "https://pool.yearntogether.com/",
     background: YearnPoolmanagement,
+    overlayColor: "rgba(43, 94, 56, 0.75)",
   },
 ];
 
