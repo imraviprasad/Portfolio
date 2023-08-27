@@ -1,16 +1,20 @@
 import S from "./layout.styled";
 import AboutMe from "../about-me";
-import Header from "../header";
-import MyRecentWorks from "../my-rececnt-works";
 import Contact from "../contact";
+import Footer from "../footer";
+import Header from "../header";
+import Intro from "../intro";
+import MyRecentWorks from "../my-rececnt-works";
 
 const Layout = () => {
   return (
     <S.LayoutContainer>
       <Header />
+      <Intro />
       <AboutMe />
       <MyRecentWorks />
-      <Contact/>
+      <Contact />
+      <Footer />
     </S.LayoutContainer>
   );
 };

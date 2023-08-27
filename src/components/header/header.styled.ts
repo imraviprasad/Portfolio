@@ -20,11 +20,12 @@ namespace S {
     cursor: "pointer",
     color: "#2d2e32",
     fontSize: "20px",
+    fontWeight: "700",
   }));
 
   export const MenuContainer = styled("ul")(({ theme }) => ({
     display: "flex",
-    gap: "2rem",
+    gap: "1.8rem",
     listStyle: "none",
   }));
 
@@ -32,6 +33,11 @@ namespace S {
     display: "flex",
     cursor: "pointer",
     fontSize: "17px",
+    a: {
+      color: "#2d2e32",
+      textDecoration: "none",
+      fontWeight: "600",
+    },
   }));
 }
 export default S;

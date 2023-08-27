@@ -7,10 +7,18 @@ const Header = () => {
     <S.HeaderContainer>
       <S.LogoContainer>Ravi.dev</S.LogoContainer>
       <S.MenuContainer>
-        <S.Menu>Home</S.Menu>
-        <S.Menu>About</S.Menu>
-        <S.Menu>Projects</S.Menu>
-        <S.Menu>Contact</S.Menu>
+        <S.Menu>
+          <a href="#Home">Home</a>
+        </S.Menu>
+        <S.Menu>
+          <a href="#About">About</a>
+        </S.Menu>
+        <S.Menu>
+          <a href="#Projects">Projects</a>
+        </S.Menu>
+        <S.Menu>
+          <a href="#contact">Contact</a>
+        </S.Menu>
       </S.MenuContainer>
     </S.HeaderContainer>
   );

@@ -21,7 +21,7 @@ namespace S {
     },
     "&:disabled": {
       background: "#B1B0B066",
-    //   color: theme.palette.mode === "dark" ? theme.palette.custom.text.primary[50] : theme.palette.custom.text.primary[400],
+      //   color: theme.palette.mode === "dark" ? theme.palette.custom.text.primary[50] : theme.palette.custom.text.primary[400],
     },
   }));
 
@@ -32,10 +32,14 @@ namespace S {
   }));
 
   export const PrimaryButton = styled(CustomButton)(({ theme }) => ({
-    backgroundColor: "red",
-    color: "blue",
+    borderRadius: "20px",
+    width: "122px",
+    backgroundColor: "white",
+    border: "1px solid #147efb",
+    color: "#147efb",
     "&:hover": {
-      backgroundColor: red,
+      backgroundColor: "#147efb",
+      color: "white",
     },
   }));
 }

@@ -1,6 +1,6 @@
 {
   "trailingComma": "all",
-  "printWidth": 150,
+  "printWidth": 100,
   "singleQuote": false,
   "importOrder": ["^react(.*)", "^@(.*)", "<THIRD_PARTY_MODULES>", ".styled$", "(.css)", "(images)", "(icons)", "^[./]", "@/(.*)"],
   "importOrderSeparation": false
