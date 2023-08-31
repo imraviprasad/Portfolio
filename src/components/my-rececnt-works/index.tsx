@@ -42,7 +42,7 @@ const workCard = [
 
 const MyRecentWorks = () => {
   return (
-    <S.MyRecentWorkContainer>
+    <S.MyRecentWorkContainer id="Projects">
       <S.Heading>
         <S.MainText>My Recent Work</S.MainText>
         <S.SubText>Here are a few past projects I've worked on.</S.SubText>

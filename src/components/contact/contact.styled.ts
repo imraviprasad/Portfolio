@@ -4,27 +4,29 @@ namespace S {
   export const ContactContainer = styled(Box)(({ theme }) => ({
     display: "flex",
     flexDirection: "column",
-    justifyContent: "flex-start",
+    justifyContent: "center",
     alignItems: "center",
     width: "100%",
     marginTop: "4rem",
-    gap: "4rem",
+    gap: "2rem",
+    maxWidth: "1030px",
+    padding: "0 40px",
+    height: "calc(100vh - 160px)",
   }));
 
   export const ContactHeader = styled(Box)(({ theme }) => ({
     width: "100%",
-    maxWidth: "950px",
   }));
 
   export const MainText = styled(Box)(({ theme }) => ({
-    fontSize: "1.7rem",
+    fontSize: "17px",
     color: "#147efb",
     fontWeight: "600",
     textTransform: "uppercase",
   }));
 
   export const SubText = styled(Box)(({ theme }) => ({
-    fontSize: "2.5rem",
+    fontSize: "25px",
     color: "#2d2e32",
     fontWeight: "600",
   }));
@@ -35,11 +37,13 @@ namespace S {
     alignItems: "center",
     justifyContent: "flex-start",
     maxWidth: "800px",
+    padding: "0 20px",
     gap: "2rem",
   }));
 
   export const Name = styled(TextField)(({ theme }) => ({
     width: "50%",
+    height: "44px !important",
   }));
 
   export const Email = styled(TextField)(({ theme }) => ({

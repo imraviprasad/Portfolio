@@ -1,6 +1,15 @@
 import { Box, Typography, styled } from "@mui/material";
 
 namespace S {
+  export const AboutMeMainContainer = styled(Box)(() => ({
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    padding: "0 40px",
+    maxWidth: "1030px",
+    height: "calc(100vh - 80px)",
+  }));
+
   export const AboutMeContainer = styled(Box)(() => ({
     display: "flex",
     flexDirection: "column",
@@ -8,7 +17,6 @@ namespace S {
     width: "100%",
     padding: "30px 0",
     textAlign: "center",
-    maxWidth: "950px",
   }));
 
   export const Heading = styled(Typography)(() => ({

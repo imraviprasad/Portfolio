@@ -7,9 +7,9 @@ import { Button } from "../buttons";
 
 const Contact = () => {
   const loginSchema = yup.object({
-    name: yup.string(),
-    email: yup.string().email(),
-    message: yup.string(),
+    name: yup.string().required("Required"),
+    email: yup.string().email().required("Required"),
+    message: yup.string().required("Required"),
     // name: yup.string().required("Required"),
     // email: yup.string().email().required("Required"),
     // message: yup.string().required("Required"),
@@ -45,24 +45,17 @@ const Contact = () => {
   };
 
   return (
-    <S.ContactContainer id="contact">
+    <S.ContactContainer id="Contact">
       <S.ContactHeader>
         <S.MainText>CONTACT</S.MainText>
         <S.SubText>Don't be shy! Hit me up!</S.SubText>
       </S.ContactHeader>
       <S.FormContainer onSubmit={handleSubmit(successCallback)}>
         <S.TopSection>
-          <S.Name id="outlined-basic" {...register("name")} label="Name" variant="outlined" />
-          <S.Email id="outlined-basic" {...register("email")} label="Email" variant="outlined" />
+          <S.Name {...register("name")} label="Name" variant="outlined" />
+          <S.Email {...register("email")} label="Email" variant="outlined" />
         </S.TopSection>
-        <S.Message
-          id="outlined-basic"
-          {...register("message")}
-          multiline
-          rows={7}
-          label="Message"
-          variant="outlined"
-        />
+        <S.Message {...register("message")} multiline rows={5} label="Message" variant="outlined" />
 
         <Button
           buttonProps={{
@@ -71,6 +64,9 @@ const Contact = () => {
         >
           Submit
         </Button>
+        {errors.name?.message}
+        {errors.email?.message}
+        {errors.message?.message}
       </S.FormContainer>
     </S.ContactContainer>
   );

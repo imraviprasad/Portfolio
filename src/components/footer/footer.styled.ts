@@ -1,7 +1,7 @@
 import GitHubIcon from "@mui/icons-material/GitHub";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import { Box, styled } from "@mui/material";
+import { Box, styled, IconButton } from "@mui/material";
 
 namespace S {
   export const FooterContainer = styled(Box)(() => ({
@@ -9,7 +9,7 @@ namespace S {
     alignItems: "center",
     justifyContent: "center",
     width: "100%",
-    padding: "50px 40px",
+    padding: "35px",
     background: "#2d2e32",
   }));
 
@@ -32,6 +32,8 @@ namespace S {
     gap: "0.4rem",
   }));
 
+  export const CustomIconButton = styled(IconButton)(() => ({}));
+
   export const Github = styled(GitHubIcon)(({ theme }) => ({
     fontSize: "1.5625rem",
     color: "#fff",
@@ -39,7 +41,7 @@ namespace S {
 
   export const Instagram = styled(InstagramIcon)(({ theme }) => ({
     fontSize: "1.5625rem",
-    color: "#fff",
+    color: "#fff !important",
   }));
 
   export const Linkedin = styled(LinkedInIcon)(({ theme }) => ({

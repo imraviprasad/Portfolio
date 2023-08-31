@@ -1,21 +1,25 @@
 import GitHubIcon from "@mui/icons-material/GitHub";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import { Box, Typography, styled } from "@mui/material";
+import { Box, IconButton, Typography, styled } from "@mui/material";
 
 namespace S {
   export const AboutMeContainer = styled(Box)(({ theme }) => ({
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    justifyContent: "space-between",
+    justifyContent: "center",
     // height: "65rem",
     width: "100%",
-    maxWidth: "950px",
+    maxWidth: "1030px",
     gap: "60px",
     marginTop: "5rem",
     marginBottom: "2rem",
+    padding: "0 40px",
     height: "calc(100vh - 192px)",
+    [theme.breakpoints.down("md")]: {
+      height: "auto",
+    },
   }));
 
   export const Profile = styled(Box)(({ theme }) => ({
@@ -23,6 +27,11 @@ namespace S {
     justifyContent: "space-between",
     height: "350px",
     width: "100%",
+    [theme.breakpoints.down("md")]: {
+      height: "auto",
+      flexDirection: "column-reverse",
+      alignItems: "center",
+    },
   }));
 
   export const AboutData = styled(Box)(({ theme }) => ({}));
@@ -57,28 +66,42 @@ namespace S {
     margin: "20px 0",
     lineHeight: "1.1",
     fontWeight: "bold",
+    [theme.breakpoints.down("md")]: {
+      textAlign: "center",
+    },
   }));
 
   export const SubTitle = styled(Typography)(({ theme }) => ({
     fontSize: "1.125rem",
+    [theme.breakpoints.down("md")]: {
+      textAlign: "center",
+    },
   }));
 
   export const LinkIcons = styled(Box)(({ theme }) => ({
     display: "flex",
     margin: "25px 0",
     gap: "0.5rem",
+    [theme.breakpoints.down("md")]: {
+      justifyContent: "center",
+    },
   }));
+
+  export const CustomIconButton = styled(IconButton)(({ theme }) => ({}));
 
   export const Github = styled(GitHubIcon)(({ theme }) => ({
     fontSize: "2.1875rem",
+    color: "#2d2e32",
   }));
 
   export const Instagram = styled(InstagramIcon)(({ theme }) => ({
     fontSize: "2.1875rem",
+    color: "#2d2e32",
   }));
 
   export const Linkedin = styled(LinkedInIcon)(({ theme }) => ({
     fontSize: "2.1875rem",
+    color: "#2d2e32",
   }));
 
   export const TechStack = styled(Box)(({ theme }) => ({
@@ -87,19 +110,39 @@ namespace S {
     gap: "1.1rem",
     width: "100%",
     height: "6rem",
+    [theme.breakpoints.down("md")]: {
+      height: "auto",
+      flexDirection: "column",
+    },
+  }));
+
+  export const SkillBar = styled(Box)(({ theme }) => ({
+    display: "flex",
+    alignItems: "center",
+    gap: "1.1rem",
+    [theme.breakpoints.down("md")]: {
+      maxWidth: "40rem",
+      flexWrap: "wrap",
+      justifyContent: "center",
+    },
   }));
 
   export const Skill = styled(Typography)(({ theme }) => ({
-    fontSize: "20px",
+    fontSize: "19px",
     fontWeight: 600,
   }));
 
-  export const TechText = styled(Typography)(() => ({
+  export const TechText = styled(Typography)(({ theme }) => ({
     borderRight: "2px solid rgba(45,46,50,.5)",
     fontWeight: "600",
     marginRight: "30px",
     paddingRight: "20px",
     color: "#2d2e32",
+    [theme.breakpoints.down("md")]: {
+      paddingRight: "0",
+      borderRight: "none",
+      borderBottom: "2px solid rgba(45,46,50,.5)",
+    },
   }));
 }
 

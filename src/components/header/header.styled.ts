@@ -1,4 +1,5 @@
-import { Box, Typography, styled } from "@mui/material";
+import MenuIcon from "@mui/icons-material/Menu";
+import { Box, IconButton, Typography, styled } from "@mui/material";
 
 namespace S {
   export const HeaderContainer = styled("nav")(({ theme }) => ({
@@ -17,10 +18,13 @@ namespace S {
   }));
 
   export const LogoContainer = styled(Typography)(({ theme }) => ({
-    cursor: "pointer",
-    color: "#2d2e32",
-    fontSize: "20px",
-    fontWeight: "700",
+    a: {
+      textDecoration: "none",
+      cursor: "pointer",
+      color: "#2d2e32",
+      fontSize: "20px",
+      fontWeight: "700",
+    },
   }));
 
   export const MenuContainer = styled("ul")(({ theme }) => ({
@@ -31,13 +35,29 @@ namespace S {
 
   export const Menu = styled("li")(({ theme }) => ({
     display: "flex",
+    alignItems: "center",
     cursor: "pointer",
     fontSize: "17px",
+
     a: {
       color: "#2d2e32",
       textDecoration: "none",
       fontWeight: "600",
     },
+    [theme.breakpoints.down("md")]: {
+      display: "none",
+    },
   }));
+
+  export const CustomIconButton = styled(IconButton)(({ theme }) => ({
+    display: "none",
+    height: "44px",
+    width: "44px",
+    [theme.breakpoints.down("md")]: {
+      display: "block",
+    },
+  }));
+
+  export const CustomMenuIcon = styled(MenuIcon)(({ theme }) => ({}));
 }
 export default S;

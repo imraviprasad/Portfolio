@@ -5,9 +5,11 @@ namespace S {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    justifyContent: "space-between",
+    justifyContent: "center",
     width: "100%",
-    maxWidth: "950px",
+    maxWidth: "1030px",
+    padding: "0 40px",
+    height: "calc(100vh - 80px)",
     gap: "5rem",
     marginTop: "3rem",
   }));
