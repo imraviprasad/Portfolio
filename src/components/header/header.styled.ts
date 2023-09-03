@@ -15,6 +15,9 @@ namespace S {
     position: "fixed",
     top: "0",
     zIndex: "200",
+    [theme.breakpoints.down("sm")]: {
+      padding: "15px 40px 15px 50px",
+    },
   }));
 
   export const LogoContainer = styled(Typography)(({ theme }) => ({
@@ -31,6 +34,49 @@ namespace S {
     display: "flex",
     gap: "1.8rem",
     listStyle: "none",
+  }));
+
+  export const FloatMenu = styled(Box, {
+    shouldForwardProp: (prop) => prop !== "view",
+  })(({ view }: { view: boolean }) => ({ theme }) => ({
+    position: "absolute",
+    top: "0",
+    left: "0",
+    width: "100%",
+    height: "300px",
+    backgroundColor: "#fff",
+    transition: "transform 0.5s ease-out",
+    transform: view ? "translateY(0)" : "translateY(-50vh)",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    borderRadius: "0 0 20px 20px",
+    boxShadow: "0 0 12px rgba(0,0,0,0.09)",
+  }));
+
+  export const CloseContainer = styled(Typography)(({ theme }) => ({
+    padding: "15px 40px 15px 50px",
+    width: "100%",
+    display: "flex",
+    justifyContent: "flex-end",
+  }));
+
+  export const VerticalMenuContainer = styled(Box)(({ theme }) => ({
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    gap: "2rem",
+    listStyle: "none",
+  }));
+
+  export const VerticalMenu = styled(Box)(({ theme }) => ({
+    cursor: "pointer",
+    fontSize: "17px",
+    a: {
+      color: "#2d2e32",
+      textDecoration: "none",
+      fontWeight: "600",
+    },
   }));
 
   export const Menu = styled("li")(({ theme }) => ({

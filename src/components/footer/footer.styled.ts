@@ -13,12 +13,16 @@ namespace S {
     background: "#2d2e32",
   }));
 
-  export const AlignmentContainer = styled(Box)(() => ({
+  export const AlignmentContainer = styled(Box)(({ theme }) => ({
     display: "flex",
     alignItems: "center",
     justifyContent: "space-between",
     width: "100%",
     maxWidth: "950px",
+    [theme.breakpoints.down("sm")]: {
+      flexDirection: "column-reverse",
+      gap: "2rem",
+    },
   }));
 
   export const LeftContainer = styled(Box)(() => ({
@@ -27,9 +31,12 @@ namespace S {
     fontWeight: "700",
   }));
 
-  export const RightContainer = styled(Box)(() => ({
+  export const RightContainer = styled(Box)(({ theme }) => ({
     display: "flex",
     gap: "0.4rem",
+    [theme.breakpoints.down("sm")]: {
+      gap: "1.5rem",
+    },
   }));
 
   export const CustomIconButton = styled(IconButton)(() => ({}));

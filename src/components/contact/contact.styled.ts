@@ -7,11 +7,14 @@ namespace S {
     justifyContent: "center",
     alignItems: "center",
     width: "100%",
-    marginTop: "4rem",
     gap: "2rem",
     maxWidth: "1030px",
     padding: "0 40px",
-    height: "calc(100vh - 160px)",
+    height: "calc(100vh - 165px)",
+    [theme.breakpoints.down("sm")]: {
+      height: "auto",
+      padding: "50px 40px",
+    },
   }));
 
   export const ContactHeader = styled(Box)(({ theme }) => ({
@@ -29,6 +32,9 @@ namespace S {
     fontSize: "25px",
     color: "#2d2e32",
     fontWeight: "600",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "23px",
+    },
   }));
 
   export const FormContainer = styled("form")(({ theme }) => ({

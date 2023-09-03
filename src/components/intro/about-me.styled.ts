@@ -9,16 +9,20 @@ namespace S {
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "center",
-    // height: "65rem",
     width: "100%",
     maxWidth: "1030px",
-    gap: "60px",
-    marginTop: "5rem",
-    marginBottom: "2rem",
+    gap: "40px",
+    // marginTop: "80px",
     padding: "0 40px",
-    height: "calc(100vh - 192px)",
+    height: "calc(100vh - 80px)",
     [theme.breakpoints.down("md")]: {
       height: "auto",
+      marginTop: "80px",
+    },
+    [theme.breakpoints.down("sm")]: {
+      marginTop: "20px",
+      padding: "0 20px",
+      gap: "10px",
     },
   }));
 
@@ -34,12 +38,16 @@ namespace S {
     },
   }));
 
-  export const AboutData = styled(Box)(({ theme }) => ({}));
+  export const AboutData = styled(Box)(({ theme }) => ({
+    [theme.breakpoints.down("sm")]: {
+      width: "100%",
+    },
+  }));
 
   export const PersonalImg = styled(Box)(({ theme }) => ({
     backgroundImage: "",
-    height: "21.875rem",
-    width: "21.875rem",
+    height: "350px",
+    width: "350px",
     backgroundPosition: "50%",
     backgroundRepeat: "50%",
     backgroundSize: "no-repeat",
@@ -59,22 +67,33 @@ namespace S {
         borderRadius: "60% 40% 30% 70%/60% 30% 70% 40%",
       },
     },
+    [theme.breakpoints.down("sm")]: {
+      height: "250px",
+      width: "250px",
+    },
   }));
 
   export const Title = styled(Typography)(({ theme }) => ({
-    fontSize: "3.4375rem",
+    fontSize: "55px",
     margin: "20px 0",
     lineHeight: "1.1",
     fontWeight: "bold",
     [theme.breakpoints.down("md")]: {
       textAlign: "center",
+      fontSize: "55px",
+    },
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "35px",
     },
   }));
 
   export const SubTitle = styled(Typography)(({ theme }) => ({
-    fontSize: "1.125rem",
+    fontSize: "18px",
     [theme.breakpoints.down("md")]: {
       textAlign: "center",
+    },
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "16px",
     },
   }));
 
@@ -130,6 +149,9 @@ namespace S {
   export const Skill = styled(Typography)(({ theme }) => ({
     fontSize: "19px",
     fontWeight: 600,
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "17px",
+    },
   }));
 
   export const TechText = styled(Typography)(({ theme }) => ({

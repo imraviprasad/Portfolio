@@ -11,7 +11,11 @@ namespace S {
     padding: "0 40px",
     height: "calc(100vh - 80px)",
     gap: "5rem",
-    marginTop: "3rem",
+    [theme.breakpoints.down("sm")]: {
+      height: "auto",
+      padding: "20px 40px",
+      gap: "2.5rem",
+    },
   }));
 
   export const Heading = styled(Box)(({ theme }) => ({
@@ -24,16 +28,24 @@ namespace S {
   export const MainText = styled(Typography)(({ theme }) => ({
     fontSize: "32px",
     fontWeight: "600",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "26px",
+    },
   }));
 
   export const SubText = styled(Typography)(({ theme }) => ({
     fontSize: "20px",
+    textAlign: "center",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "18px",
+    },
   }));
 
   export const WorkContent = styled(Box)(({ theme }) => ({
     display: "flex",
     flexWrap: "wrap",
-    // justifyContent: "space-between",
+    alignItem: "center",
+    justifyContent: "center",
     width: "100%",
   }));
 }

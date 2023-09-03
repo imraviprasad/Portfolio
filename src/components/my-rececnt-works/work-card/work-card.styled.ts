@@ -1,12 +1,23 @@
 import { Box, Typography, styled } from "@mui/material";
 
 namespace S {
-  export const FlipCardContainer = styled("div")({
+  export const FlipCardContainer = styled("div")(({ theme }) => ({
     perspective: "1000px",
     width: "33.3333%",
+    minWidth: "315px",
     height: "200px",
     padding: "10px",
-  });
+    [theme.breakpoints.down("md")]: {
+      aspectRatio: "1.5 !important",
+      width: "auto",
+      height: "250px",
+    },
+    [theme.breakpoints.down("sm")]: {
+      width: "100%",
+      aspectRatio: "1.5 !important",
+      height: "auto",
+    },
+  }));
 
   export const FlipCard = styled("div", {
     shouldForwardProp: (prop) => prop !== "isFlipped",
@@ -82,6 +93,10 @@ namespace S {
     width: "35px",
     height: "35px",
     borderRadius: "50%",
+    [theme.breakpoints.down("sm")]: {
+      width: "50px",
+      height: "50px",
+    },
   }));
 
   export const Title = styled(Typography)(({ theme }) => ({
@@ -89,6 +104,9 @@ namespace S {
     zIndex: "0",
     fontSize: "22px",
     fontWeight: "600",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "26px",
+    },
   }));
 
   export const SubText = styled(Typography)(({ theme }) => ({
@@ -96,6 +114,9 @@ namespace S {
     color: "white",
     fontSize: "16px",
     fontWeight: "600",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "18px",
+    },
   }));
 
   export const DescriptionText = styled(Typography)(({ theme }) => ({
