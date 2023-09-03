@@ -1,4 +1,4 @@
-import { Box, styled, TextField } from "@mui/material";
+import { Box, styled, TextField, Typography } from "@mui/material";
 
 namespace S {
   export const ContactContainer = styled(Box)(({ theme }) => ({
@@ -36,14 +36,13 @@ namespace S {
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "flex-start",
-    maxWidth: "800px",
+    maxWidth: "700px",
     padding: "0 20px",
     gap: "2rem",
   }));
 
   export const Name = styled(TextField)(({ theme }) => ({
     width: "50%",
-    height: "44px !important",
   }));
 
   export const Email = styled(TextField)(({ theme }) => ({
@@ -52,19 +51,39 @@ namespace S {
 
   export const Message = styled(TextField)(({ theme }) => ({
     width: "100%",
-    // height: "200px",
-    // div: {
-    //   height: "200px",
-    //   input: {
-    //     height: "200px",
-    //   },
-    // },
+  }));
+
+  export const NameErrorText = styled(Typography)(({ theme }) => ({
+    position: "absolute",
+    top: "57px",
+    left: "55.5%",
+    fontSize: "10px",
+    fontWeight: "500",
+    color: "red",
+  }));
+
+  export const EmailErrorText = styled(Typography)(({ theme }) => ({
+    position: "absolute",
+    top: "57px",
+    left: "3%",
+    fontSize: "10px",
+    fontWeight: "500",
+    color: "red",
+  }));
+
+  export const MessageErrorText = styled(Typography)(({ theme }) => ({
+    position: "absolute",
+    top: "240px",
+    left: "3%",
+    fontSize: "10px",
+    fontWeight: "500",
+    color: "red",
   }));
 
   export const TopSection = styled(Box)(({ theme }) => ({
+    position: "relative",
     display: "flex",
     width: "100%",
-
     gap: "2rem",
   }));
 }

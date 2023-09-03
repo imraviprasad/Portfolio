@@ -54,6 +54,9 @@ const Contact = () => {
         <S.TopSection>
           <S.Name {...register("name")} label="Name" variant="outlined" />
           <S.Email {...register("email")} label="Email" variant="outlined" />
+          <S.NameErrorText>{errors.name?.message}</S.NameErrorText>
+          <S.EmailErrorText>{errors.email?.message}</S.EmailErrorText>
+          <S.MessageErrorText>{errors.message?.message}</S.MessageErrorText>
         </S.TopSection>
         <S.Message {...register("message")} multiline rows={5} label="Message" variant="outlined" />
 
@@ -64,9 +67,6 @@ const Contact = () => {
         >
           Submit
         </Button>
-        {errors.name?.message}
-        {errors.email?.message}
-        {errors.message?.message}
       </S.FormContainer>
     </S.ContactContainer>
   );
