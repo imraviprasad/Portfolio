@@ -1,6 +1,10 @@
 import S from "./about-me.styled";
 
 const Intro = () => {
+  const openInNewTab = (url: string) => {
+    window.open(url, "_blank", "noreferrer");
+  };
+
   return (
     <S.AboutMeContainer id="Home">
       <S.Profile>
@@ -12,13 +16,15 @@ const Intro = () => {
             Hi, I'm Raviprasad. A passionate Developer <br /> based in Chennai, India.{" "}
           </S.SubTitle>
           <S.LinkIcons>
-            <S.CustomIconButton>
+            <S.CustomIconButton
+              onClick={() => openInNewTab("https://www.linkedin.com/in/raviprasad-elamaran/")}
+            >
               <S.Linkedin />
             </S.CustomIconButton>
-            <S.CustomIconButton>
+            <S.CustomIconButton onClick={() => openInNewTab("https://github.com/imraviprasad")}>
               <S.Github />
             </S.CustomIconButton>
-            <S.CustomIconButton>
+            <S.CustomIconButton onClick={() => openInNewTab("https://www.instagram.com/im_ravii/")}>
               <S.Instagram />
             </S.CustomIconButton>
           </S.LinkIcons>
