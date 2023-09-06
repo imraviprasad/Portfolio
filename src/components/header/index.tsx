@@ -1,17 +1,7 @@
 import { useState } from "react";
-import {
-  Link,
-  Button,
-  Element,
-  Events,
-  animateScroll as scroll,
-  scrollSpy,
-  scroller,
-} from "react-scroll";
+import { Link } from "react-scroll";
 import CloseIcon from "@mui/icons-material/Close";
 import S from "./header.styled";
-
-// import ThemeToggleSwitch from "../../utils/widgets/theme-toggle-switch";
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);

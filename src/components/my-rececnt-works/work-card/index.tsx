@@ -1,7 +1,5 @@
 import { FC, useState } from "react";
 import S from "./work-card.styled";
-import YearntogetherDashboard from "../../../assets/images/yearntogether-dashboard.png";
-import YearnLogo from "../../../assets/logo/yearn-logo.jpg";
 import AnimatedButton from "../../../utils/widgets/animated-button";
 
 type WorKCardProps = {
@@ -18,7 +16,8 @@ type WorKCardProps = {
 };
 
 const WorkCard: FC<WorKCardProps> = ({ cardInfo }) => {
-  const { id, logo, projectName, subName, description, websiteUrl, background, overlayColor } = cardInfo;
+  const { logo, projectName, subName, description, websiteUrl, background, overlayColor } =
+    cardInfo;
 
   const [isFlipped, setFlipped] = useState(false);
 

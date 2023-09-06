@@ -1,5 +1,4 @@
 import { styled, Button, CircularProgress } from "@mui/material";
-import { red } from "@mui/material/colors";
 
 namespace S {
   export const CustomButton = styled(Button)(({ theme }) => ({
@@ -21,7 +20,6 @@ namespace S {
     },
     "&:disabled": {
       background: "#B1B0B066",
-      //   color: theme.palette.mode === "dark" ? theme.palette.custom.text.primary[50] : theme.palette.custom.text.primary[400],
     },
   }));
 

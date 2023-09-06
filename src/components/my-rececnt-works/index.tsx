@@ -1,6 +1,5 @@
 import S from "./my-recent-works.styled";
 import Creatverse from "../../assets/images/creatverse.png";
-import Nerkathir from "../../assets/images/nerkathir-chitta.png";
 import YearnDashboard from "../../assets/images/yearntogether-dashboard.png";
 import YearnPoolmanagement from "../../assets/images/yearntogether-poolmanagement.png";
 import CreatverseLogo from "../../assets/logo/creatverse-logo.jpg";
