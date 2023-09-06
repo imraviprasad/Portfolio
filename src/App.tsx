@@ -1,26 +1,50 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { FC } from "react";
+import { GlobalStyles } from "@mui/material";
+import "./App.css";
+import AppRouters from "./routes/AppRouters";
+import CustomProvider from "./utils/providers";
 
-function App() {
+const App: FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <CustomProvider>
+      <GlobalStyles
+        styles={(theme) => ({
+          "*": {
+            "&::-webkit-scrollbar": {
+              width: "5px", // for vertical scroll
+              height: "5px", // for horizontal scroll
+              backgroundColor: "transparent",
+              // borderRadius: "10px",
+            },
+
+            "&::-webkit-scrollbar-thumb": {
+              borderRadius: "10px",
+              backgroundColor: "#2d2e32",
+              height: "20px",
+            },
+
+            "&::-webkit-scrollbar-track-piece:start": {
+              backgroundColor: "transparent",
+              marginTop: "80px",
+            },
+
+            "&::-webkit-scrollbar-track-piece:end": {
+              backgroundColor: "transparent",
+              // marginBottom: "70px",
+            },
+            // color: "#2D2E32",
+          },
+          ".MuiPopover-root .MuiPopover-paper": {
+            backgroundColor: "#2D2C31",
+          },
+          ".MuiLinearProgress-root .css-19c4lqn-MuiLinearProgress-root": {
+            backgroundColor: `#595959 !important`,
+          },
+        })}
+      />
+      <AppRouters />
+    </CustomProvider>
   );
-}
+};
 
 export default App;
