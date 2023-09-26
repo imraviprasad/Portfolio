@@ -37,9 +37,9 @@ const Intro = () => {
           <S.Skill>React JS </S.Skill>
           <S.Skill>Next JS</S.Skill>
           <S.Skill>Node JS</S.Skill>
-          <S.Skill>Express JS</S.Skill>
-          <S.Skill>Mongo DB</S.Skill>
+          <S.Skill>Typescript</S.Skill>
           <S.Skill>Javascript</S.Skill>
+          <S.Skill>Express JS</S.Skill>
           <S.Skill>HTML</S.Skill>
           <S.Skill>CSS</S.Skill>
         </S.SkillBar>
