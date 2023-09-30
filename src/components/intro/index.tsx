@@ -1,3 +1,4 @@
+import { Tooltip } from "@mui/material";
 import S from "./about-me.styled";
 
 const Intro = () => {
@@ -16,17 +17,25 @@ const Intro = () => {
             Hi, I'm Raviprasad. A passionate Developer <br /> based in Chennai, India.{" "}
           </S.SubTitle>
           <S.LinkIcons>
-            <S.CustomIconButton
-              onClick={() => openInNewTab("https://www.linkedin.com/in/raviprasad-elamaran/")}
-            >
-              <S.Linkedin />
-            </S.CustomIconButton>
-            <S.CustomIconButton onClick={() => openInNewTab("https://github.com/imraviprasad")}>
-              <S.Github />
-            </S.CustomIconButton>
-            <S.CustomIconButton onClick={() => openInNewTab("https://www.instagram.com/im_ravii/")}>
-              <S.Instagram />
-            </S.CustomIconButton>
+            <Tooltip title="LinkedIn">
+              <S.CustomIconButton
+                onClick={() => openInNewTab("https://www.linkedin.com/in/raviprasad-elamaran/")}
+              >
+                <S.Linkedin />
+              </S.CustomIconButton>
+            </Tooltip>
+            <Tooltip title="GitHub">
+              <S.CustomIconButton onClick={() => openInNewTab("https://github.com/imraviprasad")}>
+                <S.Github />
+              </S.CustomIconButton>
+            </Tooltip>
+            <Tooltip title="Instagram">
+              <S.CustomIconButton
+                onClick={() => openInNewTab("https://www.instagram.com/im_ravii/")}
+              >
+                <S.Instagram />
+              </S.CustomIconButton>
+            </Tooltip>
           </S.LinkIcons>
         </S.AboutData>
         <S.PersonalImg></S.PersonalImg>
