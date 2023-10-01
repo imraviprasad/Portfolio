@@ -62,7 +62,7 @@ namespace S {
   export const NameErrorText = styled(Typography)(({ theme }) => ({
     position: "absolute",
     top: "57px",
-    left: "55.5%",
+    left: "3%",
     fontSize: "10px",
     fontWeight: "500",
     color: "red",
@@ -71,7 +71,7 @@ namespace S {
   export const EmailErrorText = styled(Typography)(({ theme }) => ({
     position: "absolute",
     top: "57px",
-    left: "3%",
+    left: "55.5%",
     fontSize: "10px",
     fontWeight: "500",
     color: "red",

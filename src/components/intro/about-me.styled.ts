@@ -1,3 +1,4 @@
+import DownloadIcon from "@mui/icons-material/Download";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
@@ -108,19 +109,36 @@ namespace S {
 
   export const CustomIconButton = styled(IconButton)(({ theme }) => ({}));
 
+  export const Download = styled(DownloadIcon)(({ theme }) => ({
+    fontSize: "2.1875rem",
+    color: "#2d2e32",
+    "&:hover": {
+      color: "#147EFB",
+    },
+  }));
+
   export const Github = styled(GitHubIcon)(({ theme }) => ({
     fontSize: "2.1875rem",
     color: "#2d2e32",
+    "&:hover": {
+      color: "#147EFB",
+    },
   }));
 
   export const Instagram = styled(InstagramIcon)(({ theme }) => ({
     fontSize: "2.1875rem",
     color: "#2d2e32",
+    "&:hover": {
+      color: "#147EFB",
+    },
   }));
 
   export const Linkedin = styled(LinkedInIcon)(({ theme }) => ({
     fontSize: "2.1875rem",
     color: "#2d2e32",
+    "&:hover": {
+      color: "#147EFB",
+    },
   }));
 
   export const TechStack = styled(Box)(({ theme }) => ({
