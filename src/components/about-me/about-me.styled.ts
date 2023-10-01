@@ -47,6 +47,7 @@ namespace S {
 
   export const ContentText = styled(Typography)(({ theme }) => ({
     color: "#767676",
+    marginTop: "1rem",
     fontSize: "1.0625rem",
     [theme.breakpoints.down("sm")]: {
       fontSize: "16px",

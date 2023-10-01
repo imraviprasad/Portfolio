@@ -19,21 +19,39 @@ const Intro = () => {
           <S.LinkIcons>
             <Tooltip title="LinkedIn">
               <S.CustomIconButton
+                disableRipple
                 onClick={() => openInNewTab("https://www.linkedin.com/in/raviprasad-elamaran/")}
               >
                 <S.Linkedin />
               </S.CustomIconButton>
             </Tooltip>
             <Tooltip title="GitHub">
-              <S.CustomIconButton onClick={() => openInNewTab("https://github.com/imraviprasad")}>
+              <S.CustomIconButton
+                disableRipple
+                onClick={() => openInNewTab("https://github.com/imraviprasad")}
+              >
                 <S.Github />
               </S.CustomIconButton>
             </Tooltip>
             <Tooltip title="Instagram">
               <S.CustomIconButton
+                disableRipple
                 onClick={() => openInNewTab("https://www.instagram.com/im_ravii/")}
               >
                 <S.Instagram />
+              </S.CustomIconButton>
+            </Tooltip>
+
+            <Tooltip title="Resume">
+              <S.CustomIconButton
+                disableRipple
+                onClick={() =>
+                  openInNewTab(
+                    "https://drive.google.com/file/d/1m2RRnyUSfbtRswS3vBHENdPpZTnkCdxS/view?usp=drive_link",
+                  )
+                }
+              >
+                <S.Download />
               </S.CustomIconButton>
             </Tooltip>
           </S.LinkIcons>
