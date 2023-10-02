@@ -2,6 +2,7 @@ import DownloadIcon from "@mui/icons-material/Download";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
 import { Box, IconButton, Typography, styled } from "@mui/material";
 
 namespace S {
@@ -45,10 +46,11 @@ namespace S {
     },
   }));
 
-  export const PersonalImg = styled(Box)(({ theme }) => ({
+  export const PersonalImgContainer = styled(Box)(({ theme }) => ({
     backgroundImage: "",
     height: "350px",
     width: "350px",
+    overflow: "hidden",
     backgroundPosition: "50%",
     backgroundRepeat: "50%",
     backgroundSize: "no-repeat",
@@ -72,6 +74,10 @@ namespace S {
       height: "250px",
       width: "250px",
     },
+  }));
+
+  export const PersonalImg = styled("img")(({ theme }) => ({
+    width: "100%",
   }));
 
   export const Title = styled(Typography)(({ theme }) => ({
@@ -108,6 +114,12 @@ namespace S {
   }));
 
   export const CustomIconButton = styled(IconButton)(({ theme }) => ({}));
+
+  export const Location = styled(LocationOnIcon)(({ theme }) => ({
+    fontSize: "20px",
+    color: "#2d2e32",
+    marginBottom: "-2px",
+  }));
 
   export const Download = styled(DownloadIcon)(({ theme }) => ({
     fontSize: "2.1875rem",
