@@ -1,5 +1,6 @@
 import { Tooltip } from "@mui/material";
 import S from "./about-me.styled";
+import raviImage from "../../assets/images/ravi-portfolio-removebg-preview.jpg";
 
 const Intro = () => {
   const openInNewTab = (url: string) => {
@@ -14,7 +15,8 @@ const Intro = () => {
             MERN Stack <br /> Developer
           </S.Title>
           <S.SubTitle>
-            Hi, I'm Raviprasad. A passionate Developer <br /> based in Chennai, India.{" "}
+            Hi, I'm Raviprasad. A passionate Developer <br /> based in Chennai, India.
+            <S.Location />
           </S.SubTitle>
           <S.LinkIcons>
             <Tooltip title="LinkedIn">
@@ -56,7 +58,9 @@ const Intro = () => {
             </Tooltip>
           </S.LinkIcons>
         </S.AboutData>
-        <S.PersonalImg></S.PersonalImg>
+        <S.PersonalImgContainer>
+          <S.PersonalImg src={raviImage} alt="raviImage" />
+        </S.PersonalImgContainer>
       </S.Profile>
       <S.TechStack>
         <S.TechText>Tech Stack</S.TechText>
