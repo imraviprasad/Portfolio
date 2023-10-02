@@ -47,7 +47,7 @@ const Intro = () => {
                 disableRipple
                 onClick={() =>
                   openInNewTab(
-                    "https://drive.google.com/file/d/1m2RRnyUSfbtRswS3vBHENdPpZTnkCdxS/view?usp=drive_link",
+                    "https://drive.google.com/file/d/1LkgV8JyHY8Cuhd9KmrWLQJKVCfdvz9ih/view?usp=drive_link",
                   )
                 }
               >
