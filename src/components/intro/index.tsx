@@ -47,11 +47,11 @@ const Intro = () => {
             <Tooltip title="Resume">
               <S.CustomIconButton
                 disableRipple
-                // onClick={() =>
-                // openInNewTab(
-                //   "https://drive.google.com/file/d/1h6yT-fcqR41Qfwpw8kJMMT0OisyN0akB/view?usp=share_link",
-                // )
-                // }
+                onClick={() =>
+                  openInNewTab(
+                    "https://drive.google.com/file/d/1VcxKsUYaJpICUCNBXELLhC-eo1xq1nck/view?usp=sharing",
+                  )
+                }
               >
                 <S.Download />
               </S.CustomIconButton>
