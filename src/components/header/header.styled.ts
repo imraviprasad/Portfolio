@@ -8,7 +8,7 @@ namespace S {
     justifyContent: "space-between",
     width: "100%",
     padding: "25px 40px 25px 50px",
-    backgroundColor: "#fff",
+    background: "linear-gradient(to right, #ecf0f1, #ffffff)",
     boxShadow: "0 0 10px rgba(0,0,0,0.09)",
     height: "auto",
     left: "0",
