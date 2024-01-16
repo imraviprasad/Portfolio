@@ -1,8 +1,10 @@
 import S from "./my-recent-works.styled";
 import Creatverse from "../../assets/images/creatverse.png";
+import Proshop from "../../assets/images/proshop-homescreen-ss.png";
 import YearnDashboard from "../../assets/images/yearntogether-dashboard.png";
 import YearnPoolmanagement from "../../assets/images/yearntogether-poolmanagement.png";
 import CreatverseLogo from "../../assets/logo/creatverse-logo.jpg";
+import ProshopLogo from "../../assets/logo/proshop-logo.png";
 import YearnLogo from "../../assets/logo/yearn-logo.jpg";
 import WorkCard from "./work-card";
 
@@ -35,6 +37,16 @@ const workCard = [
     description: "The World's first-ever Gaming-Enabled IDO platform",
     websiteUrl: "https://pool.yearntogether.com/",
     background: YearnPoolmanagement,
+    overlayColor: "rgba(43, 94, 56, 0.75)",
+  },
+  {
+    id: "4",
+    logo: ProshopLogo,
+    projectName: "ProShop",
+    subName: "E-Commerce",
+    description: "A fully-functional eCommerce shop using the MERN stack",
+    websiteUrl: "https://proshop-v2-r9qy.onrender.com",
+    background: Proshop,
     overlayColor: "rgba(43, 94, 56, 0.75)",
   },
 ];
