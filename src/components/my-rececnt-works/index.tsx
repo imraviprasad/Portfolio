@@ -47,7 +47,7 @@ const workCard = [
     description: "A fully-functional eCommerce shop using the MERN stack",
     websiteUrl: "https://proshop-v2-r9qy.onrender.com",
     background: Proshop,
-    overlayColor: "rgba(43, 94, 56, 0.75)",
+    overlayColor: "rgba(143, 104, 156, 0.75)",
   },
 ];
 
